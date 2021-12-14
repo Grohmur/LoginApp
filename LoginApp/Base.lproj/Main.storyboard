@@ -57,6 +57,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgetUserNamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqJ-WB-sQp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1W-w7-J38">
                                 <rect key="frame" x="277" y="575" width="113.66666666666669" height="26.666666666666629"/>
