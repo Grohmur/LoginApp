@@ -58,7 +58,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="forgetUserNamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqJ-WB-sQp"/>
+                                    <action selector="forgetNamePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="PaC-CB-72W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1W-w7-J38">
@@ -74,6 +74,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgetPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWF-0S-dP4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

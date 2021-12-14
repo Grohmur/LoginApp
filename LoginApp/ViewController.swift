@@ -19,10 +19,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    @IBAction func forgetUserNamePressed() {
-        let nameAlert = UIAlertController(title: "Oops!", message: "Your name is \(userName)", preferredStyle: .alert)
-        present(nameAlert, animated: true)
+    
+    @IBAction func forgetNamePressed() {
+        showAlert(messadge: "Your name is <\(userName)>")
+    }
+    @IBAction func forgetPasswordPressed() {
+        showAlert(messadge: "Your password is <\(password)>")
     }
     
+}
+
+
+extension ViewController {
+    private func showAlert(messadge: String) {
+        let alert = UIAlertController(title: "Oops!", message: messadge, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
+    }
 }
