@@ -8,18 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var enteredUserName: UITextField!
+    @IBOutlet weak var enteredPassword: UITextField!
+    
     var savedUserName: String {
         "user"
     }
     var savedPassword: String {
         "password"
     }
-    @IBOutlet weak var enteredUserName: UITextField!
-    @IBOutlet weak var enteredPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let loggedInVC = segue.destination as! LoggedInViewController
+        loggedInVC.greatingMessage = "Hello, \(savedUserName)"
     }
     
     @IBAction func forgetNamePressed() {
@@ -29,6 +34,9 @@ class ViewController: UIViewController {
         showAlert(messadge: "Your password is <\(savedPassword)>")
     }
     
+    @IBAction func logginIn(for segue: UIStoryboardSegue) {
+        
+    }
 }
 
 
