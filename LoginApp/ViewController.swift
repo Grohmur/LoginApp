@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let loggedInVC = segue.destination as! LoggedInViewController
-        loggedInVC.greatingMessage = "Hello, \(savedUserName)"
+        loggedInVC.greatingMessage = "Hello, \(savedUserName)!"
     }
     
     @IBAction func forgetNamePressed() {
@@ -34,8 +34,12 @@ class ViewController: UIViewController {
         showAlert(messadge: "Your password is <\(savedPassword)>")
     }
     
-    @IBAction func logginIn(for segue: UIStoryboardSegue) {
-        
+    @IBAction func logInPressed(_ sender: Any) {
+        login(userName: enteredUserName.text, password: enteredPassword.text)
+    }
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        enteredPassword.text = ""
+        enteredUserName.text = ""
     }
 }
 
@@ -61,6 +65,8 @@ extension ViewController {
             wrongText(wrongTextField: "Password")
             return
         }
-        
+        performSegue(withIdentifier: "GoToLoggedInVC", sender: self)
     }
+    
+    
 }
