@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var enteredUserName: UITextField!
     @IBOutlet weak var enteredPassword: UITextField!
-    
+    //почему-то у меня не появляется клавиатура :(( Даже при нажатии command + k
     var savedUserName: String {
         "user"
     }
