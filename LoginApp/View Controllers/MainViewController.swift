@@ -10,20 +10,17 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var enteredUserName: UITextField!
     @IBOutlet weak var enteredPassword: UITextField!
-
-    private let savedUserName = "user"
-    private let savedPassword = "password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let loggedInVC = segue.destination as! LoggedInViewController
-        loggedInVC.userName = savedUserName
+        loggedInVC.userName = firstUser.name
     }
     
     @IBAction func forgetNamePressed() {
-        showAlert(title: "Oops!", messadge: "Your name is <\(savedUserName)>")
+        showAlert(title: "Oops!", messadge: "Your name is <\(firstUser.login)>")
     }
     @IBAction func forgetPasswordPressed() {
-        showAlert(title: "Oops!", messadge: "Your password is <\(savedPassword)>")
+        showAlert(title: "Oops!", messadge: "Your password is <\(firstUser.password)>")
     }
     
     @IBAction func logInPressed(_ sender: Any) {
@@ -48,9 +45,9 @@ extension MainViewController {
     
     private func login(userName: String?, password: String?) {
         guard let name = userName,
-                  name == savedUserName,
+              name == firstUser.login,
               let pass = password,
-                  pass == savedPassword else {
+              pass == firstUser.password else {
                       showAlert(title: "Error",
                                 messadge: "UserName of Password is wrong")
             return
