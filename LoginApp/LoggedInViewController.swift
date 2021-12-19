@@ -4,11 +4,11 @@ import UIKit
 class LoggedInViewController: UIViewController {
     @IBOutlet weak var greatingLabel: UILabel!
     
-    var greatingMessage = ""
+    var userName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        greatingLabel.text = greatingMessage
+        greatingLabel.text = "Hello, \(userName)"
     }
 
 }
