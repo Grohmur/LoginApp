@@ -14,7 +14,9 @@
 		3128F78927690C69002F52E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3128F78827690C69002F52E5 /* Assets.xcassets */; };
 		3128F78C27690C69002F52E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3128F78A27690C69002F52E5 /* LaunchScreen.storyboard */; };
 		3141EC48276F980800CA0CA5 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141EC47276F980800CA0CA5 /* PersonModel.swift */; };
-		31A892DF2769362300958ED6 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A892DE2769362300958ED6 /* LoggedInViewController.swift */; };
+		31A892DF2769362300958ED6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A892DE2769362300958ED6 /* HomeVC.swift */; };
+		31EB2A922771B737008EC7F6 /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB2A912771B737008EC7F6 /* InformationVC.swift */; };
+		31EB2A962771BEC2008EC7F6 /* ProfileVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB2A952771BEC2008EC7F6 /* ProfileVK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		3128F78B27690C69002F52E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3128F78D27690C69002F52E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3141EC47276F980800CA0CA5 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
-		31A892DE2769362300958ED6 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		31A892DE2769362300958ED6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		31EB2A912771B737008EC7F6 /* InformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
+		31EB2A952771BEC2008EC7F6 /* ProfileVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,7 @@
 			children = (
 				3141EC49276F981900CA0CA5 /* Models */,
 				3141EC44276F971400CA0CA5 /* View Controllers */,
-				3141EC45276F973000CA0CA5 /* Storiboards */,
+				3141EC45276F973000CA0CA5 /* Storyboards */,
 				3141EC46276F974100CA0CA5 /* OtherFiles */,
 			);
 			path = LoginApp;
@@ -72,18 +76,20 @@
 			isa = PBXGroup;
 			children = (
 				3128F78327690C68002F52E5 /* MainViewController.swift */,
-				31A892DE2769362300958ED6 /* LoggedInViewController.swift */,
+				31A892DE2769362300958ED6 /* HomeVC.swift */,
+				31EB2A912771B737008EC7F6 /* InformationVC.swift */,
+				31EB2A952771BEC2008EC7F6 /* ProfileVK.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		3141EC45276F973000CA0CA5 /* Storiboards */ = {
+		3141EC45276F973000CA0CA5 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				3128F78A27690C69002F52E5 /* LaunchScreen.storyboard */,
 				3128F78527690C68002F52E5 /* Main.storyboard */,
 			);
-			path = Storiboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		3141EC46276F974100CA0CA5 /* OtherFiles */ = {
@@ -179,8 +185,10 @@
 				3128F78427690C68002F52E5 /* MainViewController.swift in Sources */,
 				3128F78027690C68002F52E5 /* AppDelegate.swift in Sources */,
 				3141EC48276F980800CA0CA5 /* PersonModel.swift in Sources */,
+				31EB2A962771BEC2008EC7F6 /* ProfileVK.swift in Sources */,
 				3128F78227690C68002F52E5 /* SceneDelegate.swift in Sources */,
-				31A892DF2769362300958ED6 /* LoggedInViewController.swift in Sources */,
+				31EB2A922771B737008EC7F6 /* InformationVC.swift in Sources */,
+				31A892DF2769362300958ED6 /* HomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

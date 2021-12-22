@@ -1,7 +1,7 @@
 
 import UIKit
 
-class LoggedInViewController: UIViewController {
+class HomeVC: UIViewController {
     @IBOutlet weak var greatingLabel: UILabel!
     
     var userName = ""

@@ -11,16 +11,27 @@ class MainViewController: UIViewController {
     @IBOutlet weak var enteredUserName: UITextField!
     @IBOutlet weak var enteredPassword: UITextField!
     
+    private let guest = User.getUser()
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let loggedInVC = segue.destination as! LoggedInViewController
-        loggedInVC.userName = firstUser.name
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let homeVC = viewController as? HomeVC {
+                homeVC.userName = guest.person.name
+            } else if let navigaionVC = viewController as? UINavigationController {
+                let profileVC = navigaionVC.topViewController as! ProfileVK
+                profileVC.user = guest
+            }
+        }
     }
     
     @IBAction func forgetNamePressed() {
-        showAlert(title: "Oops!", messadge: "Your name is <\(firstUser.login)>")
+        showAlert(title: "Oops!", messadge: "Your name is <\(guest.login)>")
     }
     @IBAction func forgetPasswordPressed() {
-        showAlert(title: "Oops!", messadge: "Your password is <\(firstUser.password)>")
+        showAlert(title: "Oops!", messadge: "Your password is <\(guest.password)>")
     }
     
     @IBAction func logInPressed(_ sender: Any) {
@@ -45,11 +56,11 @@ extension MainViewController {
     
     private func login(userName: String?, password: String?) {
         guard let name = userName,
-              name == firstUser.login,
+              name == guest.login,
               let pass = password,
-              pass == firstUser.password else {
+              pass == guest.password else {
                       showAlert(title: "Error",
-                                messadge: "UserName of Password is wrong")
+                                messadge: "UserName or Password is wrong")
             return
         }
         performSegue(withIdentifier: "GoToLoggedInVC", sender: self)
